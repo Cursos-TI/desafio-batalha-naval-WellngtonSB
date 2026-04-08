@@ -4,9 +4,16 @@
 
 int main() {
     int  matrix [10][10] = {0};
-    int i, j;
-    matrix[1][3] = 3; matrix[1][4] = 3; matrix[1][5] = 3; 
-    matrix[5][8] = 3; matrix[6][8] = 3; matrix[7][8] = 3;
+    int i, j, k;
+    int navioHorizontal[3]= {3,3,3};
+    int navioVertical [3] = {3,3,3};
+    
+    for (k = 0; k < 3; k++){
+        matrix [2][3+k] = navioHorizontal[k];
+        matrix [3+k][6] = navioVertical [k];
+    }
+
+
     for (i = 0; i < 10; i++){
         for (j = 0; j < 10; j++){
             printf("%d ", matrix[i][j]);
