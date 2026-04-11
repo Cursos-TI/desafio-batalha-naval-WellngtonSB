@@ -8,12 +8,15 @@ int main() {
     int i, j, k, l, n;
     int navioHorizontal[3]= {3,3,3};
     int navioVertical [3] = {3,3,3};
-    
-    
+    int navioDiagonalDir [3] = {3,3,3};
+    int navioDiagonaEsq [3]= {3,3,3};
+
     for (k = 0; k < 3; k++){
-        matrix [2][3+k] = navioHorizontal[k]; // Cria os navio na horizontal
-        matrix [3+k][6] = navioVertical [k];  // Cria os navios na vertical
-        
+        matrix [0][0+k] = navioHorizontal[k]; // Cria os navio na horizontal
+        matrix [0+k][0] = navioVertical[k];  // Cria os navios na vertical
+        matrix [0+k][0+k] = navioDiagonalDir[k]; //cria os navios na diagonal direita
+        matrix [0+k][0-k] = navioDiagonaEsq[k];
+
     }
             printf(" # ");
         for (l ='A'; l <='J'; l++){ // cria indices de letras 
